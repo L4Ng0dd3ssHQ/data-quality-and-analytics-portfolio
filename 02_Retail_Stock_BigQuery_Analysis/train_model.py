@@ -17,7 +17,7 @@ def load_features():
             ticker, date, daily_return, log_return,
             ma_20, ma_50, ma_200,
             momentum_20, momentum_50, momentum_200,
-            volatility_30, volume_change, daily_range,
+            volatility_30, daily_range,
             target
         FROM `my-data-project-488902.market_movers.features`
         ORDER BY ticker, date
