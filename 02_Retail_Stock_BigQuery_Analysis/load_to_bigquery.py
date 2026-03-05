@@ -16,7 +16,7 @@ DATA_DIR      = "data_raw"
 def load_csv(ticker):
     path = os.path.join(DATA_DIR, f"{ticker}.csv")
     df = pd.read_csv(path, encoding="latin1")
-    df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
+    df.columns = [c.strip().lower().replace(" ", "_").replace("\xff", "").replace("ÿ", "") for c in df.columns]
     df["ticker"] = ticker
     df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d", errors="coerce")
     df = df.dropna(subset=["close"])
