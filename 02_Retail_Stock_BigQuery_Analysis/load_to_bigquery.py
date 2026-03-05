@@ -15,7 +15,7 @@ DATA_DIR      = "data_raw"
 # --- Helper: load and clean a single CSV ---
 def load_csv(ticker):
     path = os.path.join(DATA_DIR, f"{ticker}.csv")
-    df = pd.read_csv(path)
+    df = pd.read_csv(path, encoding="utf-8-sig")
     df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
     df["ticker"] = ticker
     df["date"] = pd.to_datetime(df["date"])
