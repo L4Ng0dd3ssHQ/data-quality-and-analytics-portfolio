@@ -25,12 +25,13 @@ def load_features():
     return client.query(query).to_dataframe()
 
 # --- Train model ---
-feature_cols = [
-    "daily_return", "log_return",
-    "ma_20", "ma_50", "ma_200",
-    "momentum_20", "momentum_50", "momentum_200",
-    "volatility_30", "daily_range"
-]
+def train(df):
+    feature_cols = [
+        "daily_return", "log_return",
+        "ma_20", "ma_50", "ma_200",
+        "momentum_20", "momentum_50", "momentum_200",
+        "volatility_30", "daily_range"
+    ]
 
     X = df[feature_cols]
     y = df["target"]
