@@ -10,7 +10,7 @@ client     = bigquery.Client(project=PROJECT_ID)
 # --- Tickers and file paths ---
 STOCK_TICKERS = ["TGT", "WMT", "ULTA", "KR", "COST"]
 INDEX_TICKER  = "SPY"
-DATA_DIR      = "data"
+DATA_DIR      = "data_raw"
 
 # --- Helper: load and clean a single CSV ---
 def load_csv(ticker):
