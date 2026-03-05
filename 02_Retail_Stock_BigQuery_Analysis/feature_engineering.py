@@ -1,5 +1,6 @@
 import pandas as pd
 from google.cloud import bigquery
+import math
 
 # --- Config ---
 PROJECT_ID = "my-data-project-488902"
@@ -8,7 +9,7 @@ client = bigquery.Client(project=PROJECT_ID)
 # --- Pull raw prices from BigQuery ---
 def load_prices():
     query = """
-        SELECT ticker, date, open, high, low, close, volume
+        SELECT ticker, date, open, high, low, close
         FROM `my-data-project-488902.market_movers.prices_raw`
         ORDER BY ticker, date
     """
@@ -19,9 +20,9 @@ def build_features(df):
     df = df.sort_values(["ticker", "date"]).copy()
 
     # Returns
-    df["daily_return"] = df.groupby("ticker")["close"].pct_change()
+    df["daily_return"] = df.groupby("ticker")["close"].pct_change(fill_method=None)
     df["log_return"]   = df.groupby("ticker")["close"].transform(
-        lambda x: x.div(x.shift(1)).apply(lambda v: __import__("math").log(v) if v > 0 else None)
+        lambda x: x.div(x.shift(1)).apply(lambda v: math.log(v) if v > 0 else None)
     )
 
     # Moving averages
@@ -39,9 +40,6 @@ def build_features(df):
     df["volatility_30"] = df.groupby("ticker")["log_return"].transform(
         lambda x: x.rolling(30).std() * (252 ** 0.5)
     )
-
-    # Volume change
-    df["volume_change"] = df.groupby("ticker")["volume"].pct_change()
 
     # Price range
     df["daily_range"] = (df["high"] - df["low"]) / df["close"]
@@ -67,15 +65,18 @@ if __name__ == "__main__":
     print("Loading prices from BigQuery...")
     df = load_prices()
     print(f"Raw rows loaded: {len(df)}")
-    print(df.head())
 
     print("Building features...")
     df = build_features(df)
-    print(f"Rows before dropna: {len(df)}")
-    print(f"Null counts:\n{df.isnull().sum()}")
 
-    df = df.dropna()
-    print(f"Rows after dropna: {len(df)}")
+    # Drop rows with nulls only on columns we need
+    cols_needed = [
+        "daily_return", "log_return", "ma_20", "ma_50", "ma_200",
+        "momentum_20", "momentum_50", "momentum_200",
+        "volatility_30", "daily_range", "target"
+    ]
+    df = df.dropna(subset=cols_needed)
+    print(f"Feature dataset shape: {df.shape}")
 
     print("Uploading features to BigQuery...")
     upload_features(df)
