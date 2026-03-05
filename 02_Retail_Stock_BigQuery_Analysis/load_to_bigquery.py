@@ -18,10 +18,8 @@ def load_csv(ticker):
     df = pd.read_csv(path, encoding="latin1")
     df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
     df["ticker"] = ticker
-    df["date"] = pd.to_datetime(df["date"])
-    # Drop any null rows (Yahoo sometimes adds a footer row)
-    df.columns = [c.strip().lower().replace(" ", "_") for c in df.columns]
-    df = df.dropna(subset=["close"] if "close" in df.columns else ["adj_close"])
+    df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d", errors="coerce")
+    df = df.dropna(subset=["close"])
     return df
 
 # --- Load all stock CSVs ---
