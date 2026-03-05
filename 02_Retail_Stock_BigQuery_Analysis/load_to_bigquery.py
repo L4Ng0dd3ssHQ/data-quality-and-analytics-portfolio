@@ -20,6 +20,9 @@ def load_csv(ticker):
     df["ticker"] = ticker
     df["date"] = pd.to_datetime(df["date"], format="%Y-%m-%d", errors="coerce")
     df = df.dropna(subset=["close"])
+    for col in ["open", "high", "low", "close", "adj_close", "volume"]:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
     return df
 
 # --- Load all stock CSVs ---
