@@ -66,13 +66,16 @@ def upload_features(df):
 if __name__ == "__main__":
     print("Loading prices from BigQuery...")
     df = load_prices()
+    print(f"Raw rows loaded: {len(df)}")
+    print(df.head())
 
     print("Building features...")
     df = build_features(df)
+    print(f"Rows before dropna: {len(df)}")
+    print(f"Null counts:\n{df.isnull().sum()}")
 
-    # Drop rows with nulls (from rolling windows)
     df = df.dropna()
-    print(f"Feature dataset shape: {df.shape}")
+    print(f"Rows after dropna: {len(df)}")
 
     print("Uploading features to BigQuery...")
     upload_features(df)
