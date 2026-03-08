@@ -81,3 +81,20 @@ A full end-to-end data pipeline and machine learning project analyzing 5 years o
 
 ### Momentum Signals
 ![Momentum](images/05_predictions.png)
+
+## BigQuery SQL Results
+
+### Moving Averages
+![Moving Averages](images/bigquery01_moving_averages.png)
+
+### Daily Returns
+![Daily Returns](images/bigquery02_daily_returns.png)
+
+### Volatility
+![Volatility](images/bigquery03_volatility.png)
+
+### Beta vs S&P 500
+![Beta](images/bigquery04_beta.png)
+
+### Momentum Signals
+![Momentum](images/bigquery05_momentum.png)
