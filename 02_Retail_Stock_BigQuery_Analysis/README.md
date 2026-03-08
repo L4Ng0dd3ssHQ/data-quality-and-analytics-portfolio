@@ -80,4 +80,4 @@ A full end-to-end data pipeline and machine learning project analyzing 5 years o
 ![Beta](images/04_beta.png)
 
 ### Momentum Signals
-![Momentum](images/05_momentum.png)
+![Momentum](images/05_predictions.png)
