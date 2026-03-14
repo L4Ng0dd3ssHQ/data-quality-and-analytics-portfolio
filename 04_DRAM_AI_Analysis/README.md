@@ -24,6 +24,4 @@ Q5	Can we predict the next 5 years?
 📐 6_Correlation_Calc		Calculated correlation coefficients and indexed price series. Designed for Power BI scatter plots.	
 
 📚 7_Historical_Analogs		Past tech boom/bust cycles for comparison: DRAM shortage 2017 (crypto), HDD shortage 2011 (floods), PC boom 1999.	
-				
-💡 Power BI Guide		Step-by-step tips for connecting this workbook to Power BI and building the key visuals for each research question.					
-									
+											
