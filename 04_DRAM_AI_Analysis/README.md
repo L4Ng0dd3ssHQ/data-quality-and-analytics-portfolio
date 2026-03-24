@@ -1,27 +1,64 @@
-##DRAM PRICING & AI DEMAND ANALYSIS  |  Power BI Learning Project##
+# DRAM Pricing Boom Analysis
 
-The purpose of this project is to practice researching, data cleaning, and data visulazion with tools like Excel and Power BI. 
+Challenging the current narrative that OpenAI is to blame 
+for the historical price increase we've seen with DRAM.
 
-FIVE RESEARCH QUESTIONS 
-Q1	Is there a correlation between RAM prices and AI demand?			
-Q2	Is there a correlation between RAM prices and Cloud/DC growth?			
-Q3	How big is the AI premium vs consumer prices?			
-Q4	Have we seen this before? Historical analogs?		
-Q5	Can we predict the next 5 years?	
+## Background
 
-##HOW THIS PROJUECT IS STRUCTURED##						
-							
-📊 1_DRAM_Prices		Core retail & contract pricing data for DDR3/4/5 from 2021-2026. Use this as your primary fact table in Power BI.	
+OpenAI is without a doubt the most talked about AI tool on 
+the market, making it the easiest target for scrutiny. When 
+DRAM prices hit a historical level, OpenAI was the natural 
+go-to for blame because it had been the most consumer facing 
+LLM. I do not believe proximity is a measurement of 
+correlation. I believe that correlation is a measurement 
+for correlation.
 
-🖥️ 2_Enterprise_Pricing		Enterprise/server DRAM prices (ECC, registered). Key for the AI datacenter correlation question.
+## Data Sources
 
-🤖 3_HBM_AI_Memory		High Bandwidth Memory data tied directly to AI GPU platforms (Nvidia H100/B200, AMD MI300). The clearest AI↔RAM link.
+- **SEC EDGAR 10-K filings** — Amazon, Microsoft, 
+Alphabet/Google, Meta — 2020 through 2025
+- **DRAM Pricing** — TrendForce, Tom's Hardware, 
+PCPartPicker, GamersNexus, DRAMeXchange, Amazon/Newegg
+- **Contract Pricing** — Samsung and TrendForce
 
-📈 4_Market_Share		DDR generation adoption curves. Shows the DDR4→DDR5 transition driven partly by AI infrastructure demands.	
+## Methodology
 
-🔮 5_Forecast_Model		5-year projection model with assumptions you can adjust. Includes historical analog comparison (PC boom, crypto boom).	
+Capex figures were pulled from the Purchases of Property 
+and Equipment line on the cash flow statement for all four 
+companies. Python was used to clean the comprehensive and 
+enterprise datasets, specifically to sort market types into 
+three categories and calculate the midpoint price per GB. 
+Power BI was used for data visualization, illustrating the 
+overall trend in a digestible way without having to comb 
+over the raw datasets.
 
-📐 6_Correlation_Calc		Calculated correlation coefficients and indexed price series. Designed for Power BI scatter plots.	
+## Findings
 
-📚 7_Historical_Analogs		Past tech boom/bust cycles for comparison: DRAM shortage 2017 (crypto), HDD shortage 2011 (floods), PC boom 1999.	
+Amazon's infrastructure capex increased dramatically in 
+2023-2024, predating the DRAM price shock by approximately 
+two to three quarters. Retail and contract DRAM prices 
+remained relatively stable through 2024 despite this 
+spending increase, suggesting the initial demand was 
+absorbed by existing supply. When AWS accelerated to $128B 
+in 2025, it was joined by parallel increases from Microsoft, 
+Google, and Meta and the supply buffer was exhausted. Spot 
+prices spiked first in Q2 2025, followed by contract and 
+retail prices reaching historic highs by Q4 2025.
+
+This timing sequence suggests hyperscaler infrastructure 
+investment, particularly Amazon's, was a leading indicator 
+of DRAM market disruption rather than a lagging response 
+to it. The public narrative attributing this pressure to 
+OpenAI misidentifies the mechanism. OpenAI operates 
+entirely on Microsoft's infrastructure and owns no physical 
+compute assets.
+
+## Limitations
+
+This analysis demonstrates correlation and timing patterns, 
+not proven causation. Additional factors contributed to the 
+supply shock, including HBM capacity reallocation away from 
+consumer DRAM toward AI accelerators. This analysis 
+captures the demand side but not the complete supply 
+side picture.
 											
