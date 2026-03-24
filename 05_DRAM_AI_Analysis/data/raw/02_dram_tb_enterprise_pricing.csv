@@ -1,0 +1,24 @@
+Year,Quarter,DDR Type,Price Point,Price per GB USD (Low),Price per GB USD (High),Price per TB USD (Low),Price per TB USD (High),Market Type,Vendor/Source,Currency,Data Quality,Notes
+2021,Q4,DDR4,Historic peak,6.25,9.38,6250,9380,Retail,Tom's Hardware/User Reports,USD,Confirmed,32GB kits $200-300; strong post-COVID demand
+2022,Q2-Q4,DDR4,Declining,3.75,7.5,3750,7500,Retail,TrendForce/PCPartPicker,USD,Confirmed,Oversupply developing; inventory glut period
+2022,Q4,DDR5,Stabilizing,4,6,4000,6000,Retail,Market Trends,USD,Confirmed,Premium over DDR4 narrowing as production ramped
+2023,Q1-Q2,DDR4,Historic low,1,2,1000,2000,Retail,General Market,USD,Confirmed,31 weeks of supplier stock; post-oversupply bottom
+2023,Q1-Q2,DDR5,Low period,3.13,4.38,3130,4380,Retail,Multiple Sources,USD,Confirmed,Still maintained premium over DDR4
+2024,Q1,DDR4,Recovering,1.88,2.81,1880,2810,Contract,TrendForce,USD,Confirmed,Contract prices up 13-18% QoQ
+2024,Q3,DDR4,Stable,1.88,2.81,1880,2810,Retail,PCPartPicker,USD,Confirmed,CXMT market entry suppressed prices
+2024,Q3,DDR5,Best value period,2.5,3.13,2500,3130,Retail,Amazon/Newegg,USD,Confirmed,32GB Crucial Pro DDR5-6000 $80-100 on Amazon
+2025,Q1,DDR4,Wholesale chip,0.22,0.22,,, Wholesale,Industry Reports,USD,Confirmed,8Gb chip at $1.75; 6% MoM decline in Jan 2025
+2025,Q1,DDR4,Surge begins,1.88,5,1880,5000,Retail,PCServerAndParts,USD,Confirmed,Majors shifted to DDR5/HBM; undersupply kicked in
+2025,Q1,DDR5,Pre-surge,2.5,3.13,2500,3130,Retail,Tom's Hardware,USD,Confirmed,G.SKILL Flare X5 32GB ~$87 early 2025
+2025,Q2,DDR4,Parity with DDR5,4,7,4000,7000,Spot,DRAMeXchange/TrendForce,USD,Confirmed,DDR4 reached price parity with DDR5 by May 2025
+2025,Q2,DDR5,Climbing,3.44,4.38,3440,4380,Retail,Multiple Retailers,USD,Confirmed,32GB DDR5-6000 kits $110-140
+2025,Q3,DDR4,Crisis,8,12,8000,12000,Spot,TrendForce,USD,Confirmed,+158% sequential increase; doubled in one week at one point
+2025,Q3,DDR5,Chip spot,3.1,3.1,,,Spot,TrendForce,USD,Confirmed,16Gb chip averaged $6.84 on Sep 20 rising to $24.83 by Nov 19
+2025,Q4,DDR4,Enterprise server ECC,8.09,8.09,8090,8090,Retail (Enterprise),Bacloud EU,EUR,Confirmed,32GB PC4-25600 ECC Registered 2Rx4 @ €259/module; 1TB = 32x modules = €8288
+2025,Q4,DDR5,Enterprise server ECC,7.89,7.89,7890,7890,Retail (Enterprise),Bacloud EU,EUR,Confirmed,64GB PC5-44800B-R ECC Registered 2Rx4 @ €505/module; 1TB = 16x modules = €8080
+2025,Q4,DDR5,Enterprise contract 16GB,8.44,8.44,8440,8440,Contract,Samsung,USD,Confirmed,16GB module at $135; ~50% YoY increase
+2025,Q4,DDR5,Enterprise contract 128GB,9.33,9.33,9330,9330,Contract,Samsung,USD,Confirmed,128GB module at $1194; ~50% YoY increase; 64GB/96GB up 30%+
+2025,Q4,DDR4,Consumer retail,5.03,5.03,5030,5030,Retail,US Market,USD,Confirmed,32GB kit at $161 (was $70 mid-2025; +130%)
+2025,Q4,DDR5,Consumer retail,5.75,5.75,5750,5750,Retail,US Market,USD,Confirmed,32GB kit at $184 (was $95 mid-2025; +94%)
+2026,Q1 (Projected),DDR4,Peak,15,20,15000,20000,Retail Projection,TrendForce,USD,Forecast,+55-60% QoQ surge projected; shortage extends through H1 2026
+2026,Q1 (Projected),DDR5,Peak,20,30,20000,30000,Retail Projection,TrendForce,USD,Forecast,Server DDR5 modules +60%+ QoQ; manufacturers margin 63-67%
