@@ -1,0 +1,7 @@
+Year,Amazon_AWS_Capex_B,Microsoft_Azure_Capex_B,Google_Cloud_Capex_B,Meta_Capex_B,Total_4_Hyperscalers_B,YoY_Growth_Pct,Primary_Driver_Note,Source,,,
+2020,$35.0 B,$15.4 B,$22.3 B,$15.1 B,$87.9 B,0,Pre-AI baseline,https://www.sec.gov/edgar,,,
+2021,$55.4 B,$20.6 B,$24.6 B,$18.6 B,$119.2 B,35.7%,Cloud expansion post-COVID,https://www.sec.gov/edgar,,,
+2022,$58.3 B,$23.9 B,$31.5 B,$31.4 B,$145.1 B,21.7%,Hyperscaler build-out peaks pre-slowdown,https://www.sec.gov/edgar,,,
+2023,$48.1 B,$28.1 B,$32.3 B,$27.0 B,$135.5 B,-6.6%,Pullback year — then AI pivot late 2023,https://www.sec.gov/edgar,,,
+2024,$77.7 B,$44.5 B,$52.5 B,$37.3 B,$211.9 B,56.4%,AI GPU and memory procurement surge,https://www.sec.gov/edgar,,,
+2025,$128.3 B,$64.6 B,$91.4 B,$69.7 B,$354.0 B,67.0%,AI infrastructure arms race,https://www.sec.gov/edgar,,,
